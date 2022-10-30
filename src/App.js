@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import NavBar from './components/NavBar';
+import SignInForm from './components/SignInForm';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <NavBar />
+      <h3 className='border border-dark border-end-0 border-bottom-0 border-1'>Login</h3>
+      <SignInForm />
     </div>
-  );
+  )
 }
 
-export default App;
+// class App extends React.Component {
+//   render() {
+//       return (
+//         <div>
+//           <h1> Well </h1>
+//           <h2> Hello there... </h2>
+//           <Header />
+//         </div>
+//         );
+//   }
+// }
+
+export default App
